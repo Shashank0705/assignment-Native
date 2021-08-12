@@ -1,0 +1,589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.orange {
+    color: orangered;
+}
+
+.page1 {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page1::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/background1.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        display: none !important;
+    }
+}
+
+.site-info img {
+    width: 29vh;
+    height: 15vh;
+    padding-top: 10px;
+    transition: all o.5s ease;
+}
+
+.navbar {
+    width: 100%;
+    max-height: 20%;
+    padding: 2px;
+    display: flex;
+    z-index: 1000;
+}
+
+.menu-item:nth-child(1) {
+    margin-left: 35%;
+}
+
+.menu-item:nth-child(5) {
+    margin-left: 10%;
+}
+
+.button {
+    margin-left: 10%;
+    background-color: rgb(253, 191, 75);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: 1px solid black;
+    text-align: center;
+    transition: 1s;
+    box-shadow: inset 0 0 0 0 black;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.button:hover {
+    box-shadow: inset 160px 0 0 0 rgb(252, 252, 252);
+}
+
+.site-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    width: 50%;
+    height: 100px;
+}
+
+.menu-item {
+    margin-left: 5px;
+}
+
+.menu-item a {
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 0px 15px 0 15px;
+    text-decoration: none;
+    color: black;
+    width: 150px;
+    text-align: center;
+}
+
+.menu-item a::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    left: 35px;
+    bottom: 0;
+    background: black;
+    transition: 0.6s;
+}
+
+.menu-item a:hover:before,
+.active {
+    width: 50%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px 40px;
+}
+
+.inf h1 {
+    text-transform: uppercase;
+    font-family: 'Baloo Bhai 2', cursive;
+    text-align: left;
+}
+
+.inf p {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.guy {
+    display: inline-block;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+.guy img {
+    height: 60vh;
+    width: 35vw;
+}
+
+.btn {
+    margin-top: 50px;
+    margin-left: 70px;
+    background-color: rgb(253, 191, 75);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: 1px solid black;
+    text-align: center;
+    transition: ease 1s;
+    box-shadow: inset 0 0 0 0 black;
+    cursor: pointer;
+    padding: 2px;
+    width: 180px;
+    font-family: 'Delius Unicase', cursive;
+}
+
+.btn:hover {
+    box-shadow: inset 180px 0 0 0 rgb(252, 251, 251);
+}
+
+.mkt {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    margin-left: 50px;
+}
+
+.mkt:nth-child(1) {
+    margin-left: 250px;
+}
+
+.page2 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.head {
+    margin-top: 100px;
+    margin-left: 100px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Baloo Bhai 2', cursive;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+
+.page2::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/Untitled\ design.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+}
+
+.cards {
+    display: flex;
+    margin-right: 200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col1 {
+    margin-left: 150px;
+}
+
+.card {
+    overflow: hidden;
+    box-shadow: 10px 5px 10px 0 gray;
+    border-radius: 10px;
+    display: flex;
+    height: 350px;
+    width: 300px;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    margin: 11px 15px;
+    align-items: left;
+    padding: 1rem;
+}
+
+.cardbody {
+    padding: 1rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.cardimage {
+    height: 5rem;
+    width: 7vw;
+    object-fit: cover;
+}
+
+.cardtitle {
+    font-family: 'Baloo Bhai 2', cursive;
+    text-align: left;
+}
+
+.carddescription {
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.cardbtn {
+    background-color: rgb(253, 191, 75);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: 1px solid black;
+    text-align: center;
+    transition: ease 1s;
+    box-shadow: inset 0 0 0 0 black;
+    cursor: pointer;
+    padding: 2px;
+    width: 100px;
+    font-family: 'Delius Unicase', cursive;
+}
+
+.cardbtn:hover {
+    box-shadow: inset 180px 0 0 0 rgb(252, 251, 251);
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.page3 {
+    min-height: 100vh;
+    width: 97%;
+    margin-top: 700px;
+    position: relative;
+}
+
+.page3::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/bgall.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+}
+
+.tit {
+    margin: 20px;
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    width: 300px;
+    font-family: 'Baloo Bhai 2', cursive;
+    text-transform: capitalize;
+}
+
+.top {
+    margin: 40px;
+}
+
+.su {
+    width: 90px;
+    margin: 15px 20px 0px 20px;
+    box-shadow: 1px 1px 1px 1px gray;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Baloo Bhai 2', cursive;
+    text-transform: capitalize;
+    transition: 0.6s;
+}
+
+.su:hover {
+    transform: scale(1.04);
+}
+
+#f2,
+#b2 {
+    margin-top: 290px;
+}
+
+.page4 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.page4::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/bgfr.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+}
+
+.he {
+    font-size: 35px;
+    margin-left: 190px;
+    margin-bottom: 40px;
+}
+
+.tile {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.te-mem {
+    height: 300px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    transition: 0.6s;
+    cursor: inherit;
+}
+
+.te-mem:hover {
+    transform: scale(1.09);
+}
+
+#t3,
+#t7 {
+    margin-top: 70px;
+}
+
+.name {
+    font-family: 'Baloo Bhai 2', cursive;
+    text-transform: capitalize;
+    font-size: 24px;
+}
+
+.post {
+    font-family: 'Baloo Bhai 2', cursive;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.image img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
+
+.page5 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.page5::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/bgfr.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.ny img {
+    height: 130px;
+    width: 250px;
+}
+
+.upper {
+    display: flex;
+    margin: 10px 20px;
+    justify-content: space-around;
+    max-height: 50%;
+}
+
+.lower {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ce {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-right: 120px;
+    width: 700px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.emai input {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    box-shadow: 1px 2px 0px 1px gray;
+}
+
+.emai button {
+    width: 300px;
+    height: 50px;
+}
+
+.emai button:hover {
+    box-shadow: inset 300px 0 0 0 rgb(252, 251, 251);
+}
+
+.ds {
+    font-weight: normal;
+    margin-left: 80px;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer1 {
+    min-width: 100vh;
+    margin-top: 500px;
+    color: black;
+}
+
+.footer {
+    padding: 70px 0;
+    font-family: 'Baloo Bhai 2', cursive;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: orangered;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: black;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #581808;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    color: black;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
